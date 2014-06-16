@@ -1,6 +1,35 @@
 
 
 
+/********************************************************************
+	REGEXP PATTERNS
+********************************************************************/
+
+
+
+// /[A-z]/g - all individual matches of letters A-z
+// /\b\w/g - all word characters at the beginning of a word
+// /\w\S/g - all matches of a word char followed by a non-whitespace char
+// /\w\S*/g - all matches of a word char followed by 0 or more non-whitespace chars
+// /[^\w^\s]/g - all matches of punctuation
+// /\w*\S/g - all words excluding spaces
+// /([A-z])\1*/g - all matches of same letter in a row
+// /\D/g - all non-digit characters
+// /a...b/ - a separated from b by 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /********************************************************************
 	EASY CHALLENGES
