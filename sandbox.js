@@ -30,7 +30,6 @@
 
 
 
-
 /********************************************************************
 	EASY CHALLENGES
 ********************************************************************/
@@ -284,6 +283,73 @@ function ArithGeoII(arr) {
   if (seqRecur(function (a,b) { return b / a; }, arr, (arr[1] / arr[0]))) return "Geometric";
   return -1;
 }
+
+// compare this with...
+
+// function ArrayAdditionI(arr) { 
+// 
+//   // code goes here  
+//   var nArr = arr.sort(function(a,b){return a-b}).slice(0);
+//   var m = nArr[nArr.length-1];
+//   nArr = nArr.slice(0,nArr.length-1);
+//   var cArr = combinations(nArr);
+//   for (var x=0;x<cArr.length;x++) {
+//     if (eval(cArr[x].join('+'))==m) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+// 
+// function combinations(set) {
+// 	var k, i, combs, k_combs;
+// 	combs = [];
+// 	
+// 	// Calculate all non-empty k-combinations
+// 	for (k = 1; k <= set.length; k++) {
+// 		k_combs = k_combinations(set, k);
+// 		for (i = 0; i < k_combs.length; i++) {
+// 			combs.push(k_combs[i]);
+// 		}
+// 	}
+// 	return combs;
+// }
+// 
+// function k_combinations(set, k) {
+// 	var i, j, combs, head, tailcombs;
+// 	
+// 	if (k > set.length || k <= 0) {
+// 		return [];
+// 	}
+// 	
+// 	if (k == set.length) {
+// 		return [set];
+// 	}
+// 	
+// 	if (k == 1) {
+// 		combs = [];
+// 		for (i = 0; i < set.length; i++) {
+// 			combs.push([set[i]]);
+// 		}
+// 		return combs;
+// 	}
+// 	
+// 	// Assert {1 < k < set.length}
+// 	
+// 	combs = [];
+// 	for (i = 0; i < set.length - k + 1; i++) {
+// 		head = set.slice(i, i+1);
+// 		tailcombs = k_combinations(set.slice(i + 1), k - 1);
+// 		for (j = 0; j < tailcombs.length; j++) {
+// 			combs.push(head.concat(tailcombs[j]));
+// 		}
+// 	}
+// 	return combs;
+// }
+// // keep this function call here 
+// // to see how to enter arguments in JavaScript scroll down
+// ArrayAdditionI(readline());           
+
 
 
 /****
